@@ -23,7 +23,7 @@ def call_data_wizard(text):
     return gcs_download('https://storage.cloud.google.com/<bucket>/<file_name>.csv')
 
 def slow_echo(message, history):
-    time.sleep(0.05)
+    time.sleep(0.3)
     yield call_data_wizard(message)
 
 demo = gr.ChatInterface(slow_echo, type="messages", title="Data Wizard", chatbot=gr.Chatbot(height=350), textbox=gr.Textbox(placeholder="Provide me an instruction",
