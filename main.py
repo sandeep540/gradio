@@ -19,6 +19,7 @@ def gcs_download(uri):
 # Call to external System
 def call_data_wizard(text):
     response = requests.post(url, json=data)
+    print(response)
     return gcs_download('https://storage.cloud.google.com/<bucket>/<file_name>.csv')
 
 def slow_echo(message, history):
